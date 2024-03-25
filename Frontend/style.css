@@ -1,0 +1,122 @@
+:root {
+    --color1: #05EFE6;
+    --color2: #3541EC;
+    --color3: #000002;
+}
+
+
+body {
+    background-color: var(--color3);
+}
+.navbar {
+    background-color: #000002;
+}
+
+.hero-section {
+    background-color: #000002; /* Dark background for a futuristic look */
+    color: #fff;
+    padding: 50px 0;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--color1); /* Bootstrap primary color for consistency */
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.image-container:hover::before {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); /* Adjust the color and size */
+    filter: blur(5px);
+}
+
+
+.btn-c {
+    background-color: var(--color2);
+    color: white;
+    border: none;
+    padding: 0.375rem 0.75rem; /* Bootstrap's default padding for buttons */
+    font-size: 1rem; /* Bootstrap's default font size for buttons */
+    line-height: 1.5; /* Bootstrap's default line height for buttons */
+    border-radius: 0.25rem; /* Bootstrap's default border radius for buttons */
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition for interactions */
+    text-align: center; /* Center the text inside the button */
+    vertical-align: middle; /* Align the text vertically */
+    user-select: none; /* Prevent text selection */
+    cursor: pointer; /* Change mouse cursor to pointer when hovering over the button */
+    display: inline-block; /* Allows setting margins and does not break flow */
+}
+
+/* Hover effect */
+.btn-c:hover {
+    filter: brightness(90%); /* Decreases the brightness to 90% of the original color */
+    text-decoration: none; /* Prevent underlining the text on hover */
+}
+
+
+/* Focus effect */
+.btn-c:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25); /* Bootstrap's default focus shadow but you might want to adjust the color */
+    outline: 0; /* Remove the default focus outline */
+}
+
+/* Active and pressed button effect */
+.btn-c:active {
+    background-color: darken(var(--color2), 15%); /* Further darken the button when pressed */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); /* Bootstrap's default pressed button shadow */
+}
+
+
+#register-title {
+    color: var(--color2);
+}
+
+.form-control {
+    border: 2px solid var(--color2); /* Use --color2 for the border color */
+    box-shadow: none; /* Optional: Removes the default box-shadow if you prefer */
+}
+
+.form-control:focus {
+    border-color: var(--color2); /* Makes the border color persist when the input is focused */
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25); /* Optional: Adds a glow effect, change the color as needed */
+}
+
+
+@media (max-width: 768px) {
+    .hero-section .col-md-6 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-section img {
+        max-width: 70%;
+        margin: auto; /* Center image on smaller screens */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+}
+
+
+footer {
+    background-color: #222;
+    color: #fff;
+}
